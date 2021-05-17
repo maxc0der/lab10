@@ -2,19 +2,19 @@
 
 #include "Creator.hpp"
 
-inline int random_int(const int& from, const int& to){
+int random_int(const int& from, const int& to){
   return from + std::rand() % to;
 }
 
-inline void Creator::set_values(const std::string& value) {
+void Creator::set_values(const std::string& value) {
   values.push_back(value);
 }
 
-inline int Creator::get_column_families_names_size() {
+int Creator::get_column_families_names_size() {
   return static_cast<int>(column_families_names.size());
 }
 
-inline int Creator::get_values_size() {
+int Creator::get_values_size() {
   return static_cast<int>(values.size());
 }
 
@@ -27,7 +27,7 @@ inline void create_random_values(Creator* creator){
   }
 }
 
-inline std::vector<int> count_num_in_each_column(Creator* creator){
+std::vector<int> count_num_in_each_column(Creator* creator){
   int rand = 0;
   int sum = creator->get_values_size() -
             creator->get_column_families_names_size();

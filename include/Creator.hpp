@@ -20,11 +20,11 @@ class Creator {
 
   void create_new_random_db(const std::string& path_to_new_db);
 
-  inline int get_column_families_names_size();
+  int get_column_families_names_size();
 
-  inline int get_values_size();
+  int get_values_size();
 
-  inline void set_values(const std::string& value);
+  void set_values(const std::string& value);
  private:
   rocksdb::DB* db_ptr;
   std::vector<std::string> column_families_names;
